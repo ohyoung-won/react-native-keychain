@@ -2,8 +2,9 @@ package com.oblador.keychain;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
 import android.util.Base64;
+
+import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.oblador.keychain.cipherStorage.CipherStorage.EncryptionResult;

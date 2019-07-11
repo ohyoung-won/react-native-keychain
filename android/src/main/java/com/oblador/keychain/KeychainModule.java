@@ -1,8 +1,9 @@
 package com.oblador.keychain;
 
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
@@ -255,9 +256,9 @@ public class KeychainModule extends ReactContextBaseJavaModule {
 
         throw new CryptoFailedException(
                 String.format(
-                    "Cipher Storage is too weak. Required security level is: %s, but only %s is provided",
-                    requiredLevel.name(),
-                    cipherStorage.securityLevel().name()));
+                        "Cipher Storage is too weak. Required security level is: %s, but only %s is provided",
+                        requiredLevel.name(),
+                        cipherStorage.securityLevel().name()));
     }
 
 
@@ -293,7 +294,6 @@ public class KeychainModule extends ReactContextBaseJavaModule {
             return SecurityLevel.ANY;
         }
     }
-
 
 
     @NonNull

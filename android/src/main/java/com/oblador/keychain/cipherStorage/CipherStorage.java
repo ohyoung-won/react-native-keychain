@@ -1,6 +1,6 @@
 package com.oblador.keychain.cipherStorage;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.oblador.keychain.SecurityLevel;
 import com.oblador.keychain.exceptions.CryptoFailedException;
@@ -27,16 +27,16 @@ public interface CipherStorage {
     }
 
     class DecryptionResult extends CipherResult<String> {
-      private SecurityLevel securityLevel;
+        private SecurityLevel securityLevel;
 
-      public DecryptionResult(String username, String password, SecurityLevel level) {
+        public DecryptionResult(String username, String password, SecurityLevel level) {
             super(username, password);
             securityLevel = level;
         }
 
-      public SecurityLevel getSecurityLevel() {
-        return securityLevel;
-      }
+        public SecurityLevel getSecurityLevel() {
+            return securityLevel;
+        }
     }
 
     EncryptionResult encrypt(@NonNull String service, @NonNull String username, @NonNull String password, SecurityLevel level) throws CryptoFailedException;
